@@ -1,6 +1,7 @@
 package com.development.GreetingApplication.controller;
 import com.development.GreetingApplication.Greeting;
 import com.development.GreetingApplication.service.GreetingService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.development.GreetingApplication.GreetingMessage;
 import com.development.GreetingApplication.repository.GreetingRepository;
@@ -70,5 +71,13 @@ public class GreetingController {
     public List<GreetingMessage> getAllGreetings() {
         return greetingService.getAllGreetings();
     }
+    // UC7: Update a Greeting by ID
+    @PutMapping("/{id}")
+    public ResponseEntity<GreetingMessage> updateGreeting(@PathVariable Long id, @RequestParam String message) {
+        return greetingService.updateGreeting(id, message)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
 }
 
