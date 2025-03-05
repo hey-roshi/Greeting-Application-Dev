@@ -1,4 +1,4 @@
-package com.development.GreetingApplication.config;
+package com.development.GreetingApplication;
 import com.development.GreetingApplication.config.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

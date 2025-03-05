@@ -2,6 +2,9 @@ package com.development.GreetingApplication.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 
 @Entity
 @Table(name = "auth_users")
