@@ -1,3 +1,4 @@
+
 package com.development.GreetingApplication.controller;
 import com.development.GreetingApplication.Greeting;
 import com.development.GreetingApplication.service.GreetingService;
@@ -86,4 +87,3 @@ public class GreetingController {
 
 
 }
-
